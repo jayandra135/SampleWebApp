@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://Java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <servlet>
+   
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>HelloWorld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/HelloWorld</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <display-name>InitParam</display-name>
+     <servlet-name>InitParam</servlet-name>
+    <servlet-class>InitParam</servlet-class>
+    <init-param>
+    	<param-name>company</param-name>
+    	<param-value>mphasis</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>venue</param-name>
+    	<param-value>pune</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>InitParam</servlet-name>
+  	<url-pattern>/InitParam</url-pattern>
+  </servlet-mapping>
+  
+ <!--  servlet context -->
+ <servlet>
+    <servlet-name>InitContext</servlet-name>
+    <servlet-class>InitContext</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitContext</servlet-name>
+    <url-pattern>/InitContext</url-pattern>
+  </servlet-mapping> 
+  <context-param>
+  	<param-name>dept</param-name>
+  	<param-value>traning</param-value>
+  </context-param>
+   <context-param>
+  	<param-name>technology</param-name>
+  	<param-value>java</param-value>
+  </context-param>
+<listener>
+    <listener-class>ContextListEx</listener-class>
+</listener>
+ <!--  Inter-Servlet -->
+   <servlet>
+    <servlet-name>InterServlet</servlet-name>
+    <servlet-class>InterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InterServlet</servlet-name>
+    <url-pattern>/InterServlet</url-pattern>
+  </servlet-mapping> 
+  
+ <servlet>
+    <servlet-name>Cook1</servlet-name>
+    <servlet-class>SessionDemo.Cook1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cook1</servlet-name>
+    <url-pattern>/Cook1</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>SessionEx</servlet-name>
+    <servlet-class>SessionDemo.SessionEx</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionEx</servlet-name>
+    <url-pattern>/SessionEx</url-pattern>
+ </servlet-mapping>
+  <servlet>
+    <servlet-name>ReWrite</servlet-name>
+    <servlet-class>SessionDemo.ReWrite</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReWrite</servlet-name>
+    <url-pattern>/ReWrite</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>ReWrite2</servlet-name>
+    <servlet-class>SessionDemo.ReWrite2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReWrite2</servlet-name>
+    <url-pattern>/ReWrite2</url-pattern>
+ </servlet-mapping>
+ 
+<!--  Hidden FormFiled -->
+ <servlet>
+    <servlet-name>HideForm</servlet-name>
+    <servlet-class>SessionDemo.HideForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HideForm</servlet-name>
+    <url-pattern>/HideForm</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>HideForm2</servlet-name>
+    <servlet-class>SessionDemo.HideForm2</servlet-class>
+ </servlet>
+ <servlet-mapping>
+    <servlet-name>HideForm2</servlet-name>
+    <url-pattern>/HideForm2</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+    <servlet-name>Session1</servlet-name>
+    <servlet-class>SessionDemo.Session1</servlet-class>
+ </servlet>
+ <servlet-mapping>
+    <servlet-name>Session1</servlet-name>
+    <url-pattern>/Session1</url-pattern>
+</servlet-mapping> 
+
+<!--  <listener>
+    <listener-class>ListenerDemo</listener-class>
+</listener> -->
+
+
+ <servlet>
+    <servlet-name>FilterEx</servlet-name>
+    <servlet-class>FilterEx</servlet-class>
+ </servlet>
+ <servlet-mapping>
+    <servlet-name>FilterEx</servlet-name>
+    <url-pattern>/FilterEx</url-pattern>
+</servlet-mapping> 
+
+ <servlet>
+    <servlet-name>Filter2</servlet-name>
+    <servlet-class>Filter2</servlet-class>
+ </servlet>
+ <servlet-mapping>
+    <servlet-name>Filter2</servlet-name>
+    <url-pattern>/Filter2</url-pattern>
+</servlet-mapping> 
+
+<filter>
+	<filter-name>Filtering</filter-name>
+	<filter-class>Filtering</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>Filtering</filter-name>
+	<url-pattern>/Filter2</url-pattern>
+</filter-mapping>
+
+
+<!-- jdbc example -->
+ <servlet>
+    <servlet-name>JdbcEx</servlet-name>
+    <servlet-class>JdbcEx</servlet-class>
+ </servlet>
+ <servlet-mapping>
+    <servlet-name>JdbcEx</servlet-name>
+    <url-pattern>/JdbcEx</url-pattern>
+</servlet-mapping> 
+
+
+
+
+<servlet>
+    <servlet-name>PracticeDemo</servlet-name>
+    <servlet-class>PracticeDemo</servlet-class>
+ </servlet>
+ <servlet-mapping>
+    <servlet-name>PracticeDemo</servlet-name>
+    <url-pattern>/PracticeDemo</url-pattern>
+</servlet-mapping> 
+
+
+
+<servlet>
+    <servlet-name>PracticeDemo2</servlet-name>
+    <servlet-class>PracticeDemo2</servlet-class>
+ </servlet>
+ <servlet-mapping>
+    <servlet-name>PracticeDemo2</servlet-name>
+    <url-pattern>/PracticeDemo2</url-pattern>
+</servlet-mapping> 
+
+
+  </web-app>
